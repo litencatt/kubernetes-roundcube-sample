@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roundcube-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssl-roundcube
+  template:
+    metadata:
+      labels:
+        app: ssl-roundcube
+    spec:
+      containers:
+        - name: roundcube-container
+          image: roundcube/roundcubemail:latest
+          ports:
+            - containerPort: 80
