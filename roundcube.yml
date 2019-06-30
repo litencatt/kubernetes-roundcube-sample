@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: roundcube-container
-          image: roundcube/roundcubemail:latest
+          image: roundcube/roundcubemail:latest-fpm
           ports:
-            - containerPort: 80
+            - containerPort: 9000
