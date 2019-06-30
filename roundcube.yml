@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ssl-roundcube
+      app: php-fpm-roundcube
   template:
     metadata:
       labels:
-        app: ssl-roundcube
+        app: php-fpm-roundcube
     spec:
       containers:
         - name: roundcube-container
